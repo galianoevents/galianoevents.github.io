@@ -48,8 +48,6 @@
     -webkit-transform: translate(50%, 0);
     -ms-transform: translate(50%, 0);
     transform: translate(50%, 0);
-    -webkit-box-shadow: 0 5px 10px -3px #f7be16;
-    box-shadow: 0 5px 10px -3px #f7be16;
     -webkit-transition: all .3s ease;
     -o-transition: all .3s ease;
     transition: all .3s ease;
@@ -100,8 +98,6 @@
     background-color: #f7be16;
     border-radius: 50%;
     padding: 6px;
-    -webkit-box-shadow: 0 5px 10px -3px #f7be16;
-    box-shadow: 0 5px 10px -3px #f7be16;
     -webkit-transform: translateX(-10px);
     -ms-transform: translateX(-10px);
     transform: translateX(-10px);

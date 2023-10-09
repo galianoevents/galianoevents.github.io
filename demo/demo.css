@@ -64,7 +64,7 @@ header {
 }
 .header-container>h1.title {
 	float: left;
-	font-family: 'Pacifico', cursive;
+	font-family: 'Source Sans Pro';
 	font-size: 40px;
 	line-height: 40px;
 	color: #755eb5;
@@ -177,7 +177,7 @@ section .section-content:last-of-type:not(:first-child)::after {
 	content: none;
 }
 section p.section-title {
-	font-family: 'Pacifico', cursive;
+	font-family: 'Source Sans Pro';
 	font-size: 50px;
 	line-height: 50px;
 	color: #fff;
@@ -276,26 +276,14 @@ button.btn-action.active {
 .console-log {
 	position: relative;
 	width: 100%;
-	padding: 26px 10px 10px 10px;
+	padding: 10px 10px 10px 10px;
 	background-color: #fff;
 	border-radius: 8px;
 	margin: 10px auto 30px auto;
 	-webkit-box-shadow: 0 10px 20px -5px rgba(19, 31, 51, .65);
 	box-shadow: 0 10px 20px -5px rgba(19, 31, 51, .65);
 }
-.console-log::after {
-	content: "";
-	display: block;
-	width: 8px;
-	height: 8px;
-	border-radius: 40px;
-	position: absolute;
-	top: 10px;
-	left: 10px;
-	background: #ff5f56;
-	-webkit-box-shadow: 16px 0 0 #ffbd2e, 32px 0 0 #27c93f;
-	box-shadow: 16px 0 0 #ffbd2e, 32px 0 0 #27c93f;
-}
+
 .console-log.--md {
 	width: 65%;
 }

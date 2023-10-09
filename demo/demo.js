@@ -1,10 +1,8 @@
-var defaultTheme = getRandom(4);
-
 var today = new Date();
 
 var events = [ {
     id: "imwyx6S",
-    name: "Event #3",
+    name: "Trivia Night",
     description: "Lorem ipsum dolor sit amet.",
     date: today.getMonth() + 1 + "/18/" + today.getFullYear(),
     type: "event"
@@ -90,8 +88,8 @@ $(document).ready(function() {
             everyYear: !0
         }, {
             id: "in8bha4",
-            name: "Holiday #2",
-            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+            name: "Triva Night",
+            description: "Location: Hummingbird Pub<br>Time: 7PM",
             date: today,
             type: "holiday"
         }, {
@@ -120,13 +118,7 @@ $(document).ready(function() {
         if (0 === active_events.length) a.target.disabled = !0;
         if (events.length > 0) $("#addBtn").prop("disabled", !1);
     });
-    a($("[data-set-theme]")[defaultTheme]);
-    function a(a) {
-        var b = a.dataset.setTheme;
-        $("[data-set-theme]").removeClass("active");
-        $(a).addClass("active");
-        $("#demoEvoCalendar").evoCalendar("setTheme", b);
-    }
+
     var b = getRandom($("[data-settings]").length);
     var c = $("[data-settings]")[b];
     var d = getRandom($("[data-method]").length);

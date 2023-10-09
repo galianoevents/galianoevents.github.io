@@ -76,8 +76,6 @@ input:focus, textarea:focus, button:focus {
     background-color: #8773c1;
     padding: 10px 8px;
     cursor: pointer;
-    -webkit-box-shadow: 5px 0 18px -3px #8773c1;
-            box-shadow: 5px 0 18px -3px #8773c1;
 }
 
 .calendar-sidebar > .calendar-year {
@@ -140,7 +138,7 @@ input:focus, textarea:focus, button:focus {
 
 .calendar-inner {
     position: relative;
-    padding: 40px 30px;
+    padding: 10px 10px;
     float: left;
     width: 100%;
     max-width: calc(100% - 600px);
@@ -307,8 +305,6 @@ tr.calendar-body .calendar-day .day[disabled] {
     background-color: #8773c1;
     padding: 10px;
     cursor: pointer;
-    -webkit-box-shadow: 5px 0 18px -3px #8773c1;
-            box-shadow: 5px 0 18px -3px #8773c1;
     z-index: 1;
 }
 .event-list::after {
@@ -533,7 +529,7 @@ button.icon-button > span.chevron-arrow-right {
 /* 1280 */
 @media screen and (max-width: 1280px) {
     .calendar-inner {
-        padding: 50px 20px 70px 20px;
+        padding: 20px 20px 20px 20px;
         max-width: calc(100% - 580px);
     }
     .sidebar-hide .calendar-inner {
@@ -554,7 +550,7 @@ button.icon-button > span.chevron-arrow-right {
         width: 175px;
     }
     .calendar-inner {
-        padding: 50px 10px 70px 10px;
+        padding: 10px 10px 10px 10px;
         max-width: calc(100% - 475px);
         margin-left: 175px;
     }
@@ -639,7 +635,7 @@ button.icon-button > span.chevron-arrow-right {
         width: 150px;
     }
     .calendar-inner {
-        padding: 50px 10px 70px 10px;
+        padding: 10px 10px 10px 10px;
         max-width: calc(100% - 425px);
         margin-left: 150px;
     }
@@ -661,7 +657,7 @@ button.icon-button > span.chevron-arrow-right {
         width: 180px;
     }
     .calendar-inner {
-        padding: 50px 10px 70px 10px;
+        padding: 10px 10px 10px 10px;
         max-width: 100%;
         margin-left: 0;
     }

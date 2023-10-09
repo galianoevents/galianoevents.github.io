@@ -30,13 +30,13 @@
         function EvoCalendar(element, settings) {
             var _ = this;
             _.defaults = {
-                theme: null,
+                theme: "Royal Navy",
                 format: 'mm/dd/yyyy',
                 titleFormat: 'MM yyyy',
                 eventHeaderFormat: 'MM d, yyyy',
-                firstDayOfWeek: 0,
+                firstDayOfWeek: 1,
                 language: 'en',
-                todayHighlight: false,
+                todayHighlight: true,
                 sidebarDisplayDefault: true,
                 sidebarToggler: true,
                 eventDisplayDefault: true,
@@ -55,8 +55,8 @@
                         daysMin: ["Su", "Mo", "Tu", "We", "Th", "Fr", "Sa"],
                         months: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
                         monthsShort: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
-                        noEventForToday: "No event for today.. so take a rest! :)",
-                        noEventForThisDay: "No event for this day.. so take a rest! :)",
+                        noEventForToday: "No events today",
+                        noEventForThisDay: "No event for this day",
                         previousYearText: "Previous year",
                         nextYearText: "Next year",
                         closeSidebarText: "Close sidebar",
