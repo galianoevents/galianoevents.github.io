@@ -17,7 +17,6 @@ body {
 	background-attachment: fixed;
 	background-image: linear-gradient(45deg, #6ac1c5, #bda5ff);
 	background-repeat: no-repeat;
-	min-height: 100vh;
 }
 ::-moz-selection {
 	color: #fff;
@@ -64,7 +63,7 @@ header {
 }
 .header-container>h1.title {
 	float: left;
-	font-family: 'Source Sans Pro';
+	font-family: 'Pacifico', cursive;
 	font-size: 40px;
 	line-height: 40px;
 	color: #755eb5;
@@ -127,7 +126,7 @@ footer {
 	width: 100%;
 	max-width: 1366px;
 	margin: 0 auto;
-	padding: 50px 20px 20px 20px;
+	padding: 20px 20px 20px 20px;
 	text-align: center;
 }
 .footer-container .btn-action {
@@ -146,11 +145,9 @@ main {
 	width: 100%;
 }
 .main-container {
-	padding-top: 80px;
 	max-width: 1366px;
 	width: 100%;
 	margin: 0 auto;
-	min-height: 100vh;
 }
 section {
 	padding: 20px;
@@ -177,7 +174,7 @@ section .section-content:last-of-type:not(:first-child)::after {
 	content: none;
 }
 section p.section-title {
-	font-family: 'Source Sans Pro';
+	font-family: 'Pacifico', cursive;
 	font-size: 50px;
 	line-height: 50px;
 	color: #fff;
@@ -189,7 +186,7 @@ section p.section-title.--lng {
 	margin-bottom: 40px;
 }
 section p.section-title.--shrt {
-	margin-bottom: 20px;
+	margin-bottom: 40px;
 }
 section p.section-desc {
 	font-family: 'Fira Mono', monospace;
@@ -589,9 +586,7 @@ code span.violet {
 	.header-container>ul>li>a {
 		font-size: 14px
 	}
-	.main-container {
-		padding-top: 110px
-	}
+
 	section {
 		padding: 20px
 	}
@@ -606,7 +601,7 @@ code span.violet {
 		margin-bottom: 35px
 	}
 	section p.section-title.--shrt {
-		margin-bottom: 15px
+		margin-bottom: 25px
 	}
 	section p.section-desc {
 		width: 100%;
@@ -640,7 +635,7 @@ code span.violet {
 		padding: 0 10px
 	}
 	.console-log {
-		padding: 18px 8px 8px 8px;
+		padding: 8px 8px 8px 8px;
 		border-radius: 6px
 	}
 	.console-log::after {

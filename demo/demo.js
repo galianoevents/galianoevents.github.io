@@ -3,8 +3,9 @@ var today = new Date();
 var events = [ {
     id: "imwyx6S",
     name: "Trivia Night",
+    badge: "test",
     description: "Lorem ipsum dolor sit amet.",
-    date: today.getMonth() + 1 + "/18/" + today.getFullYear(),
+    date: "10/8/2023",
     type: "event"
 }, {
     id: "9jU6g6f",
@@ -29,7 +30,7 @@ var events = [ {
     id: "dsu7HUc",
     name: "Birthday #1",
     description: "Lorem ipsum dolor sit amet.",
-    date: new Date(),
+    date: "October/13/2023",
     type: "birthday"
 }, {
     id: "dsu7HUc",
@@ -71,33 +72,7 @@ $(document).ready(function() {
     $("#demoEvoCalendar").evoCalendar({
         format: "MM dd, yyyy",
         titleFormat: "MM",
-        calendarEvents: [{
-            id: "d8jai7s",
-            name: "Author's Birthday",
-            description: "Author's note: Thank you for using EvoCalendar! :)",
-            date: "February/15/1999",
-            type: "birthday",
-            everyYear: !0
-        }, {
-            id: "sKn89hi",
-            name: "1-Week Coding Bootcamp",
-            description: "Lorem ipsum dolor sit amet.",
-            badge: "5-day event",
-            date: [ today.getMonth() + 1 + "/" + week_date.start + "/" + today.getFullYear(), today.getMonth() + 1 + "/" + week_date.end + "/" + today.getFullYear() ],
-            type: "event",
-            everyYear: !0
-        }, {
-            id: "in8bha4",
-            name: "Triva Night",
-            description: "Location: Hummingbird Pub<br>Time: 7PM",
-            date: today,
-            type: "holiday"
-        }, {
-            id: "in8bha4",
-            name: "Event #2",
-            date: today,
-            type: "event"
-        }]
+        calendarEvents: events
     });
     $("[data-set-theme]").click(function(b) {
         a(b.target);

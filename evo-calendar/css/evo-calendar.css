@@ -216,11 +216,10 @@ tr.calendar-body .calendar-day {
 }
 tr.calendar-body .calendar-day .day {
     position: relative;
-    padding: 15px;
+    padding: 8px;
     height: 60px;
     width: 60px;
     margin: 0 auto;
-    border-radius: 50%;
     text-align: center;
     color: #5a5a5a;
     border: 1px solid transparent;
@@ -451,19 +450,19 @@ tr.calendar-body .calendar-day .day[disabled] {
 /* fallback color */
 .event-container > .event-icon > div[class^="event-bullet-"],
 .event-indicator > .type-bullet > div[class^="type-"] {
-    background-color: #8773c1;
+    background-color: #bbb4d1;
 }
 .event-container > .event-icon > div.event-bullet-event,
 .event-indicator > .type-bullet > div.type-event {
-    background-color: #ff7575;
+    background-color: #bbb4d1;
 }
 .event-container > .event-icon > div.event-bullet-holiday,
 .event-indicator > .type-bullet > div.type-holiday {
-    background-color: #ffc107;
+    background-color: #bbb4d1;
 }
 .event-container > .event-icon > div.event-bullet-birthday,
 .event-indicator > .type-bullet > div.type-birthday {
-    background-color: #3ca8ff;
+    background-color: #bbb4d1;
 }
 
 
@@ -565,7 +564,7 @@ button.icon-button > span.chevron-arrow-right {
         padding: 70px 10px 60px 10px;
     }
     tr.calendar-body .calendar-day .day {
-        padding: 10px;
+        padding: 3px;
         height: 45px;
         width: 45px;
         font-size: 16px;
@@ -880,7 +879,7 @@ button.icon-button > span.chevron-arrow-right {
         padding: 8px 0;
     }
     tr.calendar-body .calendar-day .day {
-        padding: 10px;
+        padding: 3px;
         width: 40px;
         height: 40px;
         font-size: 16px;
