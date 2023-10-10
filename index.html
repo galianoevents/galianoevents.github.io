@@ -1,50 +1,82 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <title>Evo Calendar</title>
+<html>
 
-    <meta charset="utf-8">
-    <meta name="description" content="Simple Modern-looking Event Calendar Plugin">
-    <meta name="keywords" content="jQuery, Plugin, Event, Calendar, Galiano">
-    <meta name="author" content="Ryan Cooper">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<head>
+		<title>Normal Organizer Example</title>
+		<link href="./css/calendar.css" rel="stylesheet">
+	</head>
 
-    <link rel="icon" href="favicon.png">
+	<body>
+		<div id="calendarContainer"></div>
+		<div id="organizerContainer"></div>
+		<script src="./js/calendar.js"></script>
+		<script>
+			"use strict";
 
-    <!-- CSS -->
-    <link rel="stylesheet" type="text/css" href="./evo-calendar/css/evo-calendar.css">
+			// function that creates dummy data for demonstration
+			function createDummyData() {
+				var date = new Date();
+				var data = {};
 
-    <link rel="stylesheet" type="text/css" href="./demo/demo.css">
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Fira+Mono&display=swap" rel="stylesheet">
-</head>
-<body>
-    <main>
-        <div class="main-container">
-            <section id="demos">
-                <div class="section-content">
-                    <p class="section-title --shrt">Galiano Events</p>
-                    <div class="console-log">
-                        <div class="log-content">
-                            <div class="--noshadow" id="demoEvoCalendar"></div>
-                        </div>
-                    </div>
-                </div>
-            </section>
+				for (var i = 0; i < 10; i++) {
+					data[date.getFullYear() + i] = {};
 
-        </div>
-    </main>
-    <footer>
-        <div class="footer-container">
-            <p class="message">Email new events to <a href="mailto:galianoislandevents@gmail.com">galianoislandevents@gmail.com</a></p>
-        </div>
-    </footer>
+					for (var j = 0; j < 12; j++) {
+						data[date.getFullYear() + i][j + 1] = {};
 
-    <!-- jQuery -->
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
-    <script src="./evo-calendar/js/evo-calendar.js"></script>
-    <script src="./demo/demo.js"></script>
-</body>
+						for (var k = 0; k < Math.ceil(Math.random() * 10); k++) {
+							var l = Math.ceil(Math.random() * 28);
+
+							try {
+								data[date.getFullYear() + i][j + 1][l].push({
+									startTime: "10:00",
+									endTime: "12:00",
+									text: "Some Event Here",
+									link: "https://github.com/nizarmah/calendar-javascript-lib"
+								});
+							} catch (e) {
+								data[date.getFullYear() + i][j + 1][l] = [];
+								data[date.getFullYear() + i][j + 1][l].push({
+									startTime: "10:00",
+									endTime: "12:00",
+									text: "Some Event Here",
+									link: "https://github.com/nizarmah/calendar-javascript-lib"
+								});
+							}
+						}
+					}
+				}
+
+				return data;
+			}
+
+			// creating the dummy static data
+			var data = createDummyData();
+
+			// initializing a new calendar object, that will use an html container to create itself
+			var calendar = new Calendar("calendarContainer", // id of html container for calendar
+				"small", // size of calendar, can be small | medium | large
+				[
+					"Monday", // left most day of calendar labels
+					3 // maximum length of the calendar labels
+				], [
+					"#ffc107", // primary color
+					"#ffa000", // primary dark color
+					"#ffffff", // text color
+					"#ffecb3" // text dark color
+				],
+				{
+					indicator: true,
+					indicator_type: 1, // indicator type, can be 0 (not numeric) | 1 (numeric)
+					indicator_pos: "bottom" // indicator position, can be top | bottom
+				}
+			);
+
+			// initializing a new organizer object, that will use an html container to create itself
+			var organizer = new Organizer("organizerContainer", // id of html container for calendar
+				calendar, // defining the calendar that the organizer is related to
+				data // giving the organizer the static data that should be displayed
+			);
+		</script>
+	</body>
+
 </html>
